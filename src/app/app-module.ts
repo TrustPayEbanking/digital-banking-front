@@ -10,6 +10,7 @@ import {LucideAngularModule,WalletMinimal ,BanknoteArrowUp,UserCheck ,Lock,Clock
 import { WhyChosse } from './component/why-chosse/why-chosse';
 import { AvisClient } from './component/avis-client/avis-client';
 import { Footer } from './component/footer/footer';
+import { Contact } from './ui/contact/contact';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Footer } from './component/footer/footer';
     MainLayout,
     WhyChosse,
     AvisClient,
-    Footer
+    Footer,
+    Contact
   ],
   imports: [
     BrowserModule,
