@@ -63,28 +63,32 @@
   <button class="px-4 text-white bg-[#1E3231] py-2">Contact Us</button>
   <div class="w-full h-80 flex px-20 py-2 mt-2 ">
    <div class="w-1/3  h-full flex flex-col space-y-4 items-center py-1">
-    <lucide-icon size="70" name="UserCheck"> </lucide-icon>
-     <h1 class="text-2xl font-semibold">Gestion des comptes</h1>
+     <div class="w-20 h-20 rounded-full p-7 flex items-center bg-[#4d9683] justify-center">
+       <lucide-icon color="white" size="40" name="UserCheck"> </lucide-icon>
+     </div>     <h1 class="text-2xl font-semibold">Gestion des comptes</h1>
      <p class="w-100 text-center">Accédez à vos comptes bancaires à tout moment, consultez vos soldes et visualisez vos informations financières de manière claire et sécurisée.</p>
    </div>
     <div class="w-1/3  h-full flex flex-col space-y-4 items-center py-1">
-      <lucide-icon size="70" name="Lock"> </lucide-icon>
-      <h1 class="text-2xl font-semibold">Transactions sécurisées</h1>
+      <div class="w-20 h-20 rounded-full p-7 flex items-center bg-[#4d9683] justify-center">
+        <lucide-icon color="white" size="40" name="Lock"> </lucide-icon>
+      </div>      <h1 class="text-2xl font-semibold">Transactions sécurisées</h1>
       <p class="w-100 text-center">Effectuez des virements et paiements en toute confiance grâce à des mécanismes d’authentification et de sécurisation des transactions.</p>
     </div>
     <div class="w-1/3 z-10 h-full flex flex-col space-y-4 items-center py-1">
-      <lucide-icon size="70" name="Clock9"> </lucide-icon>
+     <div class="w-20 h-20 rounded-full p-7 flex items-center bg-[#4d9683] justify-center">
+       <lucide-icon color="white" size="40" name="Clock9"> </lucide-icon>
+     </div>
       <h1 class="text-2xl font-semibold">Suivi en temps réel</h1>
       <p class="w-100 text-center">Consultez l’historique de vos opérations et suivez vos transactions en temps réel pour une meilleure gestion financière.</p>
     </div>
   </div>
 </section>
-<section class="w-full h-160 flex flex-col px-20 py-2">
+<section class="w-full h-auto flex flex-col px-20 py-2">
     <div class="w-full h-auto flex flex-col space-y-2 ">
       <h1 class="text-3xl font-semibold">Une expérience e-banking simple, rapide et sécurisée</h1>
       <p class="w-180 text-sm">Accédez facilement à vos informations bancaires, consultez vos soldes, suivez vos transactions et gérez vos opérations financières en temps réel grâce à une interface intuitive et sécurisée.</p>
     </div>
-  <div class="w-full h-full   flex justify-between">
+  <div class="w-full h-full  flex justify-between">
    <div class="w-1/2 h-full mt-5 px-1 space-y-4  flex flex-col  py-1">
     <div class="w-140 space-y-2 hover:bg-[#1E3231]/80 hover:text-white px-3 py-2 h-auto hover:border-l-green-950/50 border-l-gray-400 border-l-4">
         <div class="w-auto h-auto flex space-x-2">
@@ -112,8 +116,8 @@
        </p>
      </div>
    </div>
-    <div class="w-1/2 h-full px-20 py-6 flex flex-col bg-[#1E3231]/30 rounded-2xl">
-    <div class="w-full h-60 flex flex-col px-10 py-4 rounded-2xl bg-white">
+    <div class="w-1/2 h-auto px-20 py-6 flex flex-col bg-[#1E3231]/30 rounded-2xl">
+    <div class="w-full h-auto flex flex-col  px-10 py-4 rounded-2xl bg-white">
      <div class="w-full h-auto items-center flex justify-between">
        <div class="w-auto h-full flex space-x-1">
         <div class="w-20 h-20 overflow-hidden rounded-full ">
@@ -126,7 +130,35 @@
        </div>
        <div class="px-3 py-1 h-10 flex items-center justify-center bg-emerald-600 text-white rounded-2xl"><h1 class="">Completed</h1></div>
      </div>
+      <div class="w-full h-[0.7px] mt-4 mb-2 bg-gray-950/50"></div>
+      <div class="w-full h-full  flex space-x-2">
+         <div class="w-1/3 h-full  space-y-2 flex flex-col">
+         <h1 class="font-semibold">N Transaction</h1>
+           <p>h-2435hd2</p>
+         </div>
+        <div class="w-1/3 h-full  space-y-2 flex flex-col">
+          <h1 class="font-semibold">Date Transaction</h1>
+          <p>23 Decembre 2025</p>
+        </div>
+        <div class="w-1/3 h-full  space-y-2 flex flex-col">
+          <h1 class="font-semibold">Amount</h1>
+          <p>5,000 DH</p>
+        </div>
+      </div>
     </div>
+      <div class="w-full h-40 bg-linear-to-b mt-3 space-y-2 rounded-2xl from-[#1E3231] flex flex-col justify-center items-center to-[#1E3231]/40">
+        <h1 class="text-white font-semibold">You Recived</h1>
+        <div class="w-auto h-10 bg-white flex justify-center items-center px-6 py-2 rounded-2xl">
+          <h1 class="font-semibold text-lg">5,000 DH</h1>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+<div class="w-full mt-4 mt-4 h-150">
+ <app-why-chosse></app-why-chosse>
+</div>
+<div class="w-full  mt-4 h-auto">
+  <app-avis-client></app-avis-client>
+</div>
+

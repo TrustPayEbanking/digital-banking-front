@@ -7,13 +7,19 @@ import { Home } from './ui/home/home';
 import { Navbar } from './component/navbar/navbar';
 import { MainLayout } from './layouts/main-layout/main-layout';
 import {LucideAngularModule,WalletMinimal ,BanknoteArrowUp,UserCheck ,Lock,Clock9 ,FunnelPlus ,Send,Eclipse } from 'lucide-angular';
+import { WhyChosse } from './component/why-chosse/why-chosse';
+import { AvisClient } from './component/avis-client/avis-client';
+import { Footer } from './component/footer/footer';
 
 @NgModule({
   declarations: [
     App,
     Home,
     Navbar,
-    MainLayout
+    MainLayout,
+    WhyChosse,
+    AvisClient,
+    Footer
   ],
   imports: [
     BrowserModule,
