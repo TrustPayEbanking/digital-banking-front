@@ -16,13 +16,15 @@ const routes: Routes = [
     children:[
       {path:"",component:Home},
       {path:'contact',component:Contact},
+      {path:'about',component:About},
     ]
   },
   {
     path:"login",
     component:AuthLayout,
     children:[
-      {path: '',component: Login}
+      {path: '',component: Login},
+      {path: 'account',component: Account}
     ]
   },
   {

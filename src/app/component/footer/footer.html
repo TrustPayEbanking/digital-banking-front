@@ -1,25 +1,77 @@
-<footer class="w-full  h-90 mt-5 bg-linear-to-b from-white to-[#397367] ">
-  <div class="w-full justify-center   overflow-hidden flex h-full">
-    <div class="w-1/3 flex space-y-3 items-center px-30 py-10 flex-col h-full">
-      <img width="60" height="60" src="logo.png">
-      <p class="text-xl font-semibold text-white">TrustPay</p>
-      <h1 class="text-2xl w-100 text-center font-medium text-white">
-        We Empower Your Financial Management with Secure Digital Banking      </h1>
-       <div class="w-150 justify-center space-x-2.5  flex px-8 py-3 h-18 ">
-            <input type="email" placeholder="Entre votre Email" class="border-1 px-3 text-white border-white rounded-3xl w-80">
-         <button class="w-auto bg-[#1E3231] text-white px-5 rounded-2xl">Get Started</button>
-       </div>
-    </div>
+<footer class="w-full bg-[#0b1a19] text-white relative overflow-hidden">
 
+  <div class="absolute inset-0 opacity-[0.025]">
+    <img src="logo.png" class="w-[600px] absolute -right-40 -top-40">
   </div>
-  <div class="w-full h-15 bg-[#397367] flex items-center justify-between px-6 text-white">
-    <span>&copy; 2025 TrustPay. All rights reserved.</span>
 
-    <div class="flex space-x-4">
-      <a href="#" class="hover:underline">Privacy Policy</a>
-      <a href="#" class="hover:underline">Terms of Service</a>
-      <a href="#" class="hover:underline">Contact</a>
+  <div class="relative z-10 max-w-7xl mx-auto px-20 py-28 space-y-20">
+
+    <div class="grid grid-cols-2 gap-20 items-start">
+
+      <div class="space-y-6">
+        <div class="flex items-center space-x-3">
+          <img src="logo.png" class="w-10 h-10">
+          <span class="text-2xl font-semibold">TrustPay</span>
+        </div>
+
+        <p class="text-lg leading-relaxed text-white/85 max-w-xl">
+          TrustPay is a secure digital banking platform designed to
+          simplify financial management through reliable systems,
+          real-time operations and modern security standards.
+        </p>
+
+        <p class="text-sm text-white/60 max-w-lg">
+          Our platform combines intuitive user experience with
+          robust banking infrastructure to support everyday
+          financial operations with clarity and confidence.
+        </p>
+      </div>
+
+      <div class="flex justify-end">
+        <div class="space-y-4 max-w-sm">
+          <p class="uppercase tracking-widest text-xs text-white/50">
+            Stay connected
+          </p>
+
+          <div class="flex items-center gap-3">
+            <input
+              type="email"
+              placeholder="Your email address"
+              class="w-72 h-12 px-4 rounded-xl
+                     bg-white/10 border border-white/20
+                     text-white placeholder-white/40
+                     focus:outline-none focus:ring-2 focus:ring-[#397367]/40"
+            >
+            <button
+              class="h-12 px-6 rounded-xl bg-[#397367]
+                     hover:bg-[#2f5e56] transition">
+              Subscribe
+            </button>
+          </div>
+
+          <p class="text-xs text-white/40">
+            Product updates, security notices and platform news.
+          </p>
+        </div>
+      </div>
+
     </div>
+
+    <div class="flex justify-between items-center text-sm text-white/50 pt-10 border-t border-white/10">
+
+      <div class="flex space-x-6">
+        <a href="/" class="hover:text-white transition">Home</a>
+        <a href="/about" class="hover:text-white transition">About</a>
+        <a href="/contact" class="hover:text-white transition">Contact</a>
+        <a href="/login" class="hover:text-white transition">Login</a>
+      </div>
+
+      <span>
+        © 2026 TrustPay. All rights reserved.
+      </span>
+
+    </div>
+
   </div>
 
 </footer>
