@@ -1,0 +1,81 @@
+<section class="w-full flex flex-col justify-between h-full bg-black rounded-tr-xl rounded-br-xl ">
+  <div class="w-full h-full flex flex-col">
+    <div class="w-full py-5 px-5 space-x-4 items-center h-20 flex">
+      <img width="35" height="35" src="logo.png">
+      <h1 class="text-white text-lg mt-1">TrustPay</h1>
+    </div>
+    <div class="w-full mt-4 h-auto flex flex-col space-y-4 px-4">
+      <p class="text-sm text-white font-normal">Main Menu</p>
+      <div class="w-full flex items-center   mt-2 space-x-4 h-10 py-1 px-6">
+        <lucide-icon color="gray" size="20px" name="House"></lucide-icon>
+        <h1 class="text-sm  font-normal text-white">Dashboard</h1>
+      </div>
+      <div class="w-full flex items-center  flex-col  mt-2  h-auto py-1 px-5">
+        <div  (click)="changeEtatdropedwon()"  class="{{dropdown_departement ? '' : ''}} px-1 py-1 rounded-lg w-full justify-between flex  h-auto">
+          <div class="w-auto h-full flex space-x-4">
+            <lucide-icon color="white" size="20px" name="Workflow"></lucide-icon>
+            <button class=" text-sm  font-normal text-white">Bank Account</button>
+          </div>
+          <lucide-icon class=" {{dropdown_departement ? 'rotate-90' : 'rotate-0'}} " color="white" size="20px" name="ChevronRight"></lucide-icon>
+        </div>
+        @if(dropdown_departement){
+          <div   class="w-full mt-5 ml-6 justify-between flex  h-auto">
+            <div class="w-auto h-full flex space-x-4">
+              <lucide-icon color="gray" size="20px" name="HandCoins"></lucide-icon>
+              <button class="text-sm  font-normal text-white">Saving Account</button>
+            </div>
+          </div>
+          <div   class="w-full mt-5 ml-6 justify-between flex  h-auto">
+            <div class="w-auto h-full flex space-x-4">
+              <lucide-icon color="gray" size="20px" name="DollarSign"></lucide-icon>
+              <button class="text-sm  font-normal text-white">Current Account</button>
+            </div>
+          </div>
+        }
+      </div>
+      <div class="w-full flex items-center  mt-3 space-x-4 h-auto py-1 px-6">
+        <lucide-icon color="gray" size="20px" name="User"></lucide-icon>
+        <h1 class="text-sm  font-normal text-gray-500">Cutomers</h1>
+      </div>
+      <div class="w-full flex items-center  mt-3 space-x-4 h-auto py-1 px-6">
+        <lucide-icon color="gray" size="20px" name="Phone"></lucide-icon>
+        <h1 class="text-sm  font-normal text-gray-500">Contact Us</h1>
+      </div>
+      <div class="w-full flex items-center  mt-3 space-x-4 h-auto py-1 px-6">
+        <lucide-icon color="gray" size="20px" name="Send"></lucide-icon>
+        <h1 class="text-sm  font-normal text-gray-500">Transaction</h1>
+      </div>
+      <div class="w-full flex items-center  mt-3 space-x-4 h-auto py-1 px-6">
+        <lucide-icon color="gray" size="20px" name="Handshake"></lucide-icon>
+        <h1 class="text-sm  font-normal text-gray-500">Operations</h1>
+      </div>
+    </div>
+  </div>
+  <div class="w-full h-auto mb-1  flex flex-col">
+    <div   class="w-full   mt-6 ml-6 justify-between flex  h-auto">
+      <div class="w-auto h-full flex space-x-4">
+        <lucide-icon color="gray" size="20px" name="Settings"></lucide-icon>
+        <button class="text-sm  font-normal text-gray-500">Settings</button>
+      </div>
+    </div>
+    <div   class="w-full   mt-6 ml-6 justify-between flex  h-auto">
+      <div class="w-auto h-full flex space-x-4">
+        <lucide-icon color="gray" size="20px" name="FileUser"></lucide-icon>
+        <button class="text-sm  font-normal text-gray-500">Contact support</button>
+      </div>
+    </div>
+    <div   class="w-full   mt-6 ml-6 justify-between flex  h-auto">
+      <div class="w-auto h-full flex space-x-4">
+        <lucide-icon color="gray" size="20px" name="LogOut"></lucide-icon>
+        <button class="text-sm  font-normal text-gray-500">Log Out</button>
+      </div>
+    </div>
+
+    <div class="w-full overflow-hidden mt-5 h-13 flex items-center space-x-3 ">
+      <div class=" bg-amber-200 overflow-hidden flex w-12 h-12 rounded-full ml-2 " >
+        <img src="avisclient/acis1.jpg">
+      </div>
+      <h1 class="text-white">Oussama hamdane</h1>
+    </div>
+  </div>
+</section>
