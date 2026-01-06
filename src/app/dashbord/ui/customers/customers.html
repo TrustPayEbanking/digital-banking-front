@@ -1,3 +1,48 @@
-<p>
-  faire une pipe | aysn
-</p>
+<div class="customers-page">
+
+  <div class="page-header">
+    <h2>Customers</h2>
+    <p>Manage and view all registered customers</p>
+  </div>
+
+  <form [formGroup]="formGroup" class="search-bar">
+    <input
+      type="text"
+      formControlName="keyword"
+      placeholder="Search customer..."
+    />
+  </form>
+
+  <div class="card" *ngIf="customers | async as list">
+    <table>
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let customer of list">
+        <td>{{ customer.id }}</td>
+        <td>{{ customer.name }}</td>
+        <td>{{ customer.email }}</td>
+        <td>
+          <button class="btn delete" (click)="deleteCustomer(customer.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+
+      <tr *ngIf="list.length === 0">
+        <td colspan="4" class="empty">
+          No customers found
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
