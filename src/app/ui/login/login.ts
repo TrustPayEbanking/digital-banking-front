@@ -12,7 +12,7 @@ import {Router} from '@angular/router';
 export class Login implements OnInit{
 
   formLogin! :FormGroup
- constructor(private fb :FormBuilder,private authServices : Auth,private router :Router) {
+ constructor(private fb :FormBuilder,private authServices : Auth ,private router : Router) {
  }
  ngOnInit() {
    this.formLogin=this.fb.group({
@@ -26,6 +26,7 @@ export class Login implements OnInit{
     this.authServices.login(username,password).subscribe({
       next: value => {
          this.authServices.loadProfile(value);
+         this.router.navigateByUrl("/dashbord")
       },
       error:err => {
         console.log(err)

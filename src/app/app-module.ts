@@ -20,6 +20,8 @@ import { Navbardashbord } from './dashbord/components/navbardashbord/navbardashb
 import { Index } from './dashbord/ui/index/index';
 import { AuthDashbord } from './layouts/auth-dashbord/auth-dashbord';
 import {NgClass} from '@angular/common';
+import {HTTP_INTERCEPTORS, provideHttpClient, withInterceptors, withInterceptorsFromDi} from '@angular/common/http';
+import {appAuthinterceptorInterceptor} from './interceptors/app-authinterceptor-interceptor';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,10 @@ import {NgClass} from '@angular/common';
 
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient(
+      withInterceptors([appAuthinterceptorInterceptor])
+    ),
   ],
   bootstrap: [App]
 })
