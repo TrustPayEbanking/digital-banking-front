@@ -7,6 +7,8 @@ import {AuthLayout} from './layouts/auth-layout/auth-layout';
 import {Login} from './ui/login/login';
 import {AuthDashbord} from './layouts/auth-dashbord/auth-dashbord';
 import {Index} from './dashbord/ui/index';
+import {About} from './ui/about/about';
+import {Account} from './ui/account/account';
 
 const routes: Routes = [
   {
@@ -15,13 +17,15 @@ const routes: Routes = [
     children:[
       {path:"",component:Home},
       {path:'contact',component:Contact},
+      {path:'about',component:About},
     ]
   },
   {
     path:"login",
     component:AuthLayout,
     children:[
-      {path: '',component: Login}
+      {path: '',component: Login},
+      {path: 'account',component: Account}
     ]
   },
   {
