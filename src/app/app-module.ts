@@ -55,7 +55,9 @@ import { Sidebar } from './dashbord/components/sidebar/sidebar';
 import { Navbardashbord } from './dashbord/components/navbardashbord/navbardashbord';
 import { Index } from './dashbord/ui/index/index';
 import { AuthDashbord } from './layouts/auth-dashbord/auth-dashbord';
-import { About } from './ui/about/about';
+import {NgClass} from '@angular/common';
+import {HTTP_INTERCEPTORS, provideHttpClient, withInterceptors, withInterceptorsFromDi} from '@angular/common/http';
+import {appAuthinterceptorInterceptor} from './interceptors/app-authinterceptor-interceptor';
 
 @NgModule({
   declarations: [
@@ -119,7 +121,10 @@ import { About } from './ui/about/about';
   ],
 
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient(
+      withInterceptors([appAuthinterceptorInterceptor])
+    ),
   ],
 
   bootstrap: [App]

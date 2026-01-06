@@ -11,6 +11,10 @@ export class CustomerService {
 
   }
   public getCustomer():Observable<Array<Customer>>{
-    return this.http.get<Array<Customer>>("http://localhost:8087/customers")
+    return this.http.get<Array<Customer>>("http://localhost:8089/customers")
+  }
+  public getCountCoutomer():Observable<number>{
+    let response =this.http.get<number>("http://localhost:8089/customer/count")
+    return response
   }
 }

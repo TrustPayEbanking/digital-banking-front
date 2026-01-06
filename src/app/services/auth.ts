@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable, signal} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
 import {jwtDecode} from 'jwt-decode';
 
@@ -10,12 +10,14 @@ export class Auth {
   roles :any;
   username :any;
   accessToken! :string;
+
   constructor(private http:HttpClient) {
   }
   public login(username :string,password:string){
     let params=new HttpParams().set("username",username).set("password",password);
     let options={
-      headers : new HttpHeaders().set("Application","x-www-form-urlencoded")
+      headers : new HttpHeaders().set("Application","x-www-form-urlencoded"),
+      withCredentials: true
     }
      return this.http.post("http://localhost:8089/auth/login",params,options)
   }
@@ -27,5 +29,12 @@ export class Auth {
      let jwtdecoer:any=jwtDecode(this.accessToken);
      this.username=jwtdecoer.sub;
      this.roles=jwtdecoer.scope;
+  }
+
+  logout() {
+     this.isAuthenticated=false;
+     this.accessToken="";
+     this.username=undefined;
+     this.roles=undefined;
   }
 }

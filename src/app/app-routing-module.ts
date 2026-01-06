@@ -7,8 +7,7 @@ import {AuthLayout} from './layouts/auth-layout/auth-layout';
 import {Login} from './ui/login/login';
 import {AuthDashbord} from './layouts/auth-dashbord/auth-dashbord';
 import {Index} from './dashbord/ui/index';
-import {About} from './ui/about/about';
-import {Account} from './ui/account/account';
+import {authenticationGuard} from './guards/authentication-guard';
 
 const routes: Routes = [
   {
@@ -31,6 +30,7 @@ const routes: Routes = [
   {
     path:"dashbord",
     component:AuthDashbord,
+    canActivate : [authenticationGuard],
     children:[
       {path: '',component: Index },
     ]
