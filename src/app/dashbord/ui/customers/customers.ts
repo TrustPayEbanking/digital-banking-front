@@ -1,30 +1,45 @@
-import {Component, OnInit} from '@angular/core';
-import {CustomerService} from '../../../services/customer';
-import {catchError, Observable, throwError} from 'rxjs';
-import {Customer} from '../../../model/Customer.model';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule, FormBuilder, FormGroup } from '@angular/forms';
+import { Observable } from 'rxjs';
+
+import { CustomerService } from '../../../services/customer';
+import { Customer } from '../../../model/Customer.model';
 
 @Component({
   selector: 'app-customers',
-  standalone: false,
+  standalone: true,
+  imports: [
+    CommonModule,
+    ReactiveFormsModule
+  ],
   templateUrl: './customers.html',
-  styleUrl: './customers.css',
+  styleUrls: ['./customers.css']
 })
-export class Customers implements OnInit{
-  customers! : Observable<Array<Customer>>;
-  erroMessage! : string;
-  formGroup! : FormGroup;
-  constructor(private customerservice:CustomerService,private fb : FormBuilder) {
+export class Customers implements OnInit {
+
+  customers!: Observable<Customer[]>;
+  formGroup!: FormGroup;
+
+  constructor(
+    private customerService: CustomerService,
+    private fb: FormBuilder
+  ) {}
+
+  ngOnInit(): void {
+    this.formGroup = this.fb.group({
+      keyword: ['']
+    });
+
+    this.loadCustomers();
   }
-  ngOnInit() {
-    this.formGroup=this.fb.group({
-      keyword : this.fb.control("")
-    })
-    this.customers=this.customerservice.getCustomer().pipe(
-      catchError(err => {
-        this.erroMessage=err.message;
-       return  throwError(err);
-      }),
-    );
+
+  loadCustomers(): void {
+    this.customers = this.customerService.getCustomer();
+  }
+
+  deleteCustomer(id: number): void {
+    this.customerService.deleteCustomer(id);
+    this.loadCustomers();
   }
 }
