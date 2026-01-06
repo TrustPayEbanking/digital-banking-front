@@ -1,0 +1,90 @@
+<!-- Bouton flottant -->
+<div class="fixed bottom-6 right-6 z-[9999]">
+  <button
+    (click)="toggleChat()"
+    class="relative flex h-16 w-16 items-center justify-center
+           rounded-full bg-emerald-600 text-white
+           shadow-2xl transition hover:scale-110"
+  >
+    <i class="fa-solid fa-comment-dots text-2xl"></i>
+
+    <!-- badge notification -->
+    <span
+      *ngIf="hasNewMessage"
+      class="absolute top-1 right-1 h-3 w-3 rounded-full bg-red-500 ring-2 ring-white"
+    ></span>
+  </button>
+</div>
+
+<!-- Overlay -->
+<div
+  *ngIf="isOpen"
+  class="fixed inset-0 z-[9998] bg-black/50 backdrop-blur-sm"
+  (click)="toggleChat()"
+></div>
+
+<!-- Fenêtre de chat -->
+<div
+  *ngIf="isOpen"
+  class="fixed bottom-24 right-6 z-[9999]
+         h-[520px] w-[420px]
+         max-w-[95vw] max-h-[90vh]
+         rounded-2xl bg-white shadow-2xl
+         flex flex-col"
+>
+
+  <!-- Header -->
+  <div class="flex items-center justify-between
+              rounded-t-2xl bg-emerald-600 px-5 py-4 text-white">
+    <div class="text-lg font-semibold">TrustPay Assistant</div>
+    <button (click)="toggleChat()">
+      <i class="fa-solid fa-xmark text-xl"></i>
+    </button>
+  </div>
+
+  <!-- Messages -->
+  <div class="flex-1 overflow-y-auto px-5 py-4 space-y-3 text-sm">
+    <div
+      *ngFor="let msg of messages"
+      class="max-w-[75%] rounded-2xl px-4 py-3"
+      [ngClass]="{
+        'bg-gray-100 self-start': msg.from === 'bot',
+        'bg-emerald-600 text-white self-end ml-auto': msg.from === 'user'
+      }"
+    >
+      {{ msg.text }}
+    </div>
+  </div>
+
+  <!-- Suggestions -->
+  <div
+    *ngIf="suggestions.length"
+    class="flex flex-wrap gap-2 px-4 py-3 border-t bg-white"
+  >
+    <button
+      *ngFor="let s of suggestions"
+      (click)="selectSuggestion(s)"
+      class="rounded-full border border-emerald-600
+             px-4 py-2 text-sm text-emerald-600
+             transition hover:bg-emerald-50"
+    >
+      {{ s }}
+    </button>
+  </div>
+
+  <!-- Input -->
+  <form class="flex items-center gap-3 border-t px-4 py-3" (ngSubmit)="sendMessage()">
+    <input
+      [(ngModel)]="userInput"
+      name="message"
+      type="text"
+      placeholder="Écrire un message..."
+      class="flex-1 rounded-xl bg-gray-100 px-4 py-2 text-sm outline-none focus:ring-2 focus:ring-emerald-500"
+    />
+
+    <button type="submit" class="text-emerald-600">
+      <i class="fa-solid fa-paper-plane text-lg"></i>
+    </button>
+  </form>
+
+</div>

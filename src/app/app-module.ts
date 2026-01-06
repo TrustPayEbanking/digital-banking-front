@@ -14,12 +14,13 @@ import { Contact } from './ui/contact/contact';
 import { Login } from './ui/login/login';
 import { AuthLayout } from './layouts/auth-layout/auth-layout';
 import { Customers } from './dashbord/ui/customers/customers';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { Sidebar } from './dashbord/components/sidebar/sidebar';
 import { Navbardashbord } from './dashbord/components/navbardashbord/navbardashbord';
 import { Index } from './dashbord/ui/index/index';
 import { AuthDashbord } from './layouts/auth-dashbord/auth-dashbord';
 import {NgClass} from '@angular/common';
+import { TchatBot } from './component/tchat-bot/tchat-bot';
 
 @NgModule({
   declarations: [
@@ -37,13 +38,49 @@ import {NgClass} from '@angular/common';
     Sidebar,
     Navbardashbord,
     Index,
-    AuthDashbord
+    AuthDashbord,
+    TchatBot
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LucideAngularModule.pick({ WalletMinimal ,BanknoteArrowUp,UserCheck ,Lock ,TrendingUp,Clock9,TrendingDown ,CreditCard,FunnelPlus,Send,Eclipse,Workflow ,Phone,Briefcase,Handshake ,DollarSign ,HandCoins,ChevronRight ,Users ,FileUser,MessagesSquare ,Building2,User,Settings,LogOut,BotMessageSquare ,MessageCircleMore ,Bell,RefreshCw ,ChevronDown,EllipsisVertical,House,Form }),
+    LucideAngularModule.pick({
+      WalletMinimal,
+      BanknoteArrowUp,
+      UserCheck,
+      Lock,
+      TrendingUp,
+      Clock9,
+      TrendingDown,
+      CreditCard,
+      FunnelPlus,
+      Send,
+      Eclipse,
+      Workflow,
+      Phone,
+      Briefcase,
+      Handshake,
+      DollarSign,
+      HandCoins,
+      ChevronRight,
+      Users,
+      FileUser,
+      MessagesSquare,
+      Building2,
+      User,
+      Settings,
+      LogOut,
+      BotMessageSquare,
+      MessageCircleMore,
+      Bell,
+      RefreshCw,
+      ChevronDown,
+      EllipsisVertical,
+      House,
+      Form
+    }),
     ReactiveFormsModule,
+    FormsModule,
 
   ],
   providers: [
