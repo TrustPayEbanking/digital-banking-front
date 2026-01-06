@@ -6,7 +6,43 @@ import { App } from './app';
 import { Home } from './ui/home/home';
 import { Navbar } from './component/navbar/navbar';
 import { MainLayout } from './layouts/main-layout/main-layout';
-import {LucideAngularModule,WalletMinimal ,BanknoteArrowUp,UserCheck ,Lock,Clock9 ,FunnelPlus ,CreditCard,TrendingDown ,TrendingUp ,Send,Eclipse, Phone ,ChevronRight ,Handshake ,HandCoins ,DollarSign ,Workflow,Briefcase,Users ,FileUser,MessagesSquare ,Building2,User,Settings,LogOut,BotMessageSquare ,MessageCircleMore ,Bell,RefreshCw ,ChevronDown,EllipsisVertical,House,Form} from 'lucide-angular';
+import {
+  LucideAngularModule,
+  WalletMinimal,
+  BanknoteArrowUp,
+  UserCheck,
+  Lock,
+  Clock9,
+  FunnelPlus,
+  CreditCard,
+  TrendingDown,
+  TrendingUp,
+  Send,
+  Eclipse,
+  Phone,
+  ChevronRight,
+  Handshake,
+  HandCoins,
+  DollarSign,
+  Workflow,
+  Briefcase,
+  Users,
+  FileUser,
+  MessagesSquare,
+  Building2,
+  User,
+  Settings,
+  LogOut,
+  BotMessageSquare,
+  MessageCircleMore,
+  Bell,
+  RefreshCw,
+  ChevronDown,
+  EllipsisVertical,
+  House,
+  Form
+} from 'lucide-angular';
+
 import { WhyChosse } from './component/why-chosse/why-chosse';
 import { AvisClient } from './component/avis-client/avis-client';
 import { Footer } from './component/footer/footer';
@@ -14,12 +50,12 @@ import { Contact } from './ui/contact/contact';
 import { Login } from './ui/login/login';
 import { AuthLayout } from './layouts/auth-layout/auth-layout';
 import { Customers } from './dashbord/ui/customers/customers';
-import {ReactiveFormsModule} from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { Sidebar } from './dashbord/components/sidebar/sidebar';
 import { Navbardashbord } from './dashbord/components/navbardashbord/navbardashbord';
 import { Index } from './dashbord/ui/index/index';
 import { AuthDashbord } from './layouts/auth-dashbord/auth-dashbord';
-import {NgClass} from '@angular/common';
+import { About } from './ui/about/about';
 
 @NgModule({
   declarations: [
@@ -37,18 +73,55 @@ import {NgClass} from '@angular/common';
     Sidebar,
     Navbardashbord,
     Index,
-    AuthDashbord
-  ],
+    AuthDashbord,
+    About
+  ],  // ✅ THIS COMMA WAS MISSING
+
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LucideAngularModule.pick({ WalletMinimal ,BanknoteArrowUp,UserCheck ,Lock ,TrendingUp,Clock9,TrendingDown ,CreditCard,FunnelPlus,Send,Eclipse,Workflow ,Phone,Briefcase,Handshake ,DollarSign ,HandCoins,ChevronRight ,Users ,FileUser,MessagesSquare ,Building2,User,Settings,LogOut,BotMessageSquare ,MessageCircleMore ,Bell,RefreshCw ,ChevronDown,EllipsisVertical,House,Form }),
     ReactiveFormsModule,
-
+    LucideAngularModule.pick({
+      WalletMinimal,
+      BanknoteArrowUp,
+      UserCheck,
+      Lock,
+      Clock9,
+      FunnelPlus,
+      CreditCard,
+      TrendingDown,
+      TrendingUp,
+      Send,
+      Eclipse,
+      Workflow,
+      Phone,
+      Briefcase,
+      Handshake,
+      DollarSign,
+      HandCoins,
+      ChevronRight,
+      Users,
+      FileUser,
+      MessagesSquare,
+      Building2,
+      User,
+      Settings,
+      LogOut,
+      BotMessageSquare,
+      MessageCircleMore,
+      Bell,
+      RefreshCw,
+      ChevronDown,
+      EllipsisVertical,
+      House,
+      Form
+    }),
   ],
+
   providers: [
     provideBrowserGlobalErrorListeners()
   ],
+
   bootstrap: [App]
 })
 export class AppModule { }
