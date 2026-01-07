@@ -56,6 +56,9 @@ import { Navbardashbord } from './dashbord/components/navbardashbord/navbardashb
 import { Index } from './dashbord/ui/index/index';
 import { AuthDashbord } from './layouts/auth-dashbord/auth-dashbord';
 import { About } from './ui/about/about';
+import { Transactions } from './dashbord/ui/transactions/transactions';
+import { Operations } from './dashbord/ui/operations/operations';
+import { Settings } from './dashbord/ui/settings/settings';
 
 @NgModule({
   declarations: [
@@ -74,8 +77,8 @@ import { About } from './ui/about/about';
     Navbardashbord,
     Index,
     AuthDashbord,
-    About
-  ],  // ✅ THIS COMMA WAS MISSING
+    About,
+  ],
 
   imports: [
     BrowserModule,
