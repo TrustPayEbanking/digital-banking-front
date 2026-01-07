@@ -58,7 +58,8 @@ import { AuthDashbord } from './layouts/auth-dashbord/auth-dashbord';
 import { About } from './ui/about/about';
 import { Transactions } from './dashbord/ui/transactions/transactions';
 import { Operations } from './dashbord/ui/operations/operations';
-import { Settings } from './dashbord/ui/settings/settings';
+import {provideHttpClient, withInterceptors} from '@angular/common/http';
+import {appAuthinterceptorInterceptor} from './interceptors/app-authinterceptor-interceptor';
 
 @NgModule({
   declarations: [
@@ -122,9 +123,11 @@ import { Settings } from './dashbord/ui/settings/settings';
   ],
 
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
+    provideHttpClient(
+      withInterceptors([appAuthinterceptorInterceptor])
+    ),
   ],
-
   bootstrap: [App]
 })
 export class AppModule { }

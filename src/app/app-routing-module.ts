@@ -9,6 +9,8 @@ import { Home } from './ui/home/home';
 import { Contact } from './ui/contact/contact';
 import { About } from './ui/about/about';
 import { Login } from './ui/login/login';
+import {Index} from './dashbord/ui/index';
+import {Customers} from './dashbord/ui/customers/customers';
 
 const routes: Routes = [
   {
@@ -33,11 +35,12 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadComponent: () =>
-          import('./dashbord/ui/index/index')
-            .then(m => m.Index)
-      },
+        component: Index},
       {
+        path: 'customers',
+        component: Customers},
+      {
+
         path: 'transactions',
         loadComponent: () =>
           import('./dashbord/ui/transactions/transactions')
