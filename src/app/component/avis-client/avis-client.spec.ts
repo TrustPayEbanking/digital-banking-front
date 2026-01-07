@@ -10,7 +10,7 @@ describe('AvisClient', () => {
     await TestBed.configureTestingModule({
       declarations: [AvisClient]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(AvisClient);
     component = fixture.componentInstance;

@@ -1,164 +1,236 @@
-<section class="w-full h-auto  relative flex justify-between">
-  <div class="w-1/2 h-full mt-10  py-15 px-14 space-y-4 flex flex-col">
-    <p class="text-[#1E3231]"><span class="bg-[#3C6E71]/30">SMART DIGI</span>TAL BANKING</p>
-    <h1 class="text-5xl font-semibold leading-15">Gérez vos finances  simplement
-      en  toute sécurité et en temps  réel</h1>
-    <p class="w-170 h-auto text-sm">
+<section class="w-full min-h-screen relative flex flex-col md:flex-row justify-between items-center px-4 sm:px-6 md:px-8 lg:px-12 py-8 md:py-12">
+  <!-- Left Column -->
+  <div class="w-full md:w-1/2 h-full space-y-6 md:space-y-8">
+    <p class="text-[#1E3231] text-sm md:text-base"><span class="bg-[#3C6E71]/30 px-2 py-1 rounded">SMART DIGI</span>TAL BANKING</p>
+    <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight md:leading-snug lg:leading-15">
+      Gérez vos finances simplement en toute sécurité et en temps réel
+    </h1>
+    <p class="text-gray-600 text-sm md:text-base leading-relaxed">
       Notre plateforme e-banking permet aux utilisateurs de consulter leurs comptes, effectuer des virements, suivre leurs transactions et gérer leur argent de manière rapide, sécurisée et intuitive.
       Conçue comme un projet académique, elle met en œuvre les concepts essentiels des systèmes bancaires numériques modernes.
     </p>
-    <div class="w-140 h-18 flex py-2 px-3 flex justify-between bg-white shadow-2xl rounded-2xl">
-     <input placeholder="Entre Votre Email" class=" outline-none ring-0 focus:ring-0 focus:outline-none px-4 focus:border-none w-100 ring-0">
-      <button class="px-3 py-2 text-sm w-auto my-1 rounded-2xl text-white font-semibold bg-[#3C6E71]">Start Contact US</button>
+
+    <!-- Email Input -->
+    <div class="w-full max-w-lg flex flex-col sm:flex-row gap-4 p-4 sm:p-3 bg-white shadow-lg rounded-2xl">
+      <input
+        placeholder="Entre Votre Email"
+        class="flex-grow outline-none ring-0 focus:ring-0 focus:outline-none px-4 py-3 sm:py-2 focus:border-none ring-0 border border-gray-300 rounded-xl sm:border-none"
+      >
+      <button class="px-6 py-3 sm:py-2 text-sm sm:text-base font-semibold bg-[#3C6E71] text-white rounded-xl hover:bg-[#2c5254] transition-colors">
+        Start Contact US
+      </button>
     </div>
-   <div class="w-full flex  h-30 py-2 px-3 space-x-10 ">
-    <div class="w-auto h-full flex py-3 items-center flex-col space-y-2 ">
-     <h1 class="text-2xl text-emerald-800 font-bold">100%</h1>
-      <p class="text-sm text-center">Transactions <br> sécurisées</p>
+
+    <!-- Stats -->
+    <div class="flex flex-col sm:flex-row gap-6 sm:gap-10 pt-4">
+      <div class="text-center sm:text-left">
+        <h1 class="text-3xl text-emerald-800 font-bold">100%</h1>
+        <p class="text-gray-600 text-sm">Transactions<br>sécurisées</p>
+      </div>
+      <div class="text-center sm:text-left">
+        <h1 class="text-3xl text-emerald-800 font-bold">24/7</h1>
+        <p class="text-gray-600 text-sm">Accès aux<br>services bancaires</p>
+      </div>
     </div>
-     <div class="w-auto h-full flex py-3 items-center flex-col space-y-2 ">
-       <h1 class="text-2xl text-emerald-800 font-bold">24/7</h1>
-       <p class="text-sm text-center">Accès aux <br>services  bancaires</p>
-     </div>
-   </div>
   </div>
-  <div class="w-1/2 h-full relative px-2 py-10 ">
-    <div class="w-full h-30 relative ">
-      <div class="w-20 h-20 absolute left-10 flex items-center justify-center bg-[#1E3231]">
-        <lucide-icon name="WalletMinimal" size="40" color="white"></lucide-icon>
+
+  <!-- Right Column -->
+  <div class="w-full md:w-1/2 h-full relative mt-8 md:mt-0 md:pl-8 lg:pl-12">
+    <!-- Decorative Icons -->
+    <div class="relative w-full h-32 md:h-40 mb-4">
+      <div class="absolute w-16 h-16 md:w-20 md:h-20 left-4 md:left-10 top-4 flex items-center justify-center bg-[#1E3231] rounded-lg shadow-lg">
+        <lucide-icon name="WalletMinimal" class="w-8 h-8 md:w-10 md:h-10" color="white"></lucide-icon>
       </div>
-      <div class="w-10 top-20 h-10 absolute left-30 flex items-center justify-center bg-[#1E3231]/30">
+      <div class="absolute w-8 h-8 md:w-10 md:h-10 left-24 md:left-32 top-12 md:top-20 flex items-center justify-center bg-[#1E3231]/30 rounded-full">
       </div>
-      <div class="w-20 h-20 absolute right-10 flex items-center justify-center bg-[#1E3231]">
-        <lucide-icon name="BanknoteArrowUp" size="40" color="white"></lucide-icon>
+      <div class="absolute w-16 h-16 md:w-20 md:h-20 right-4 md:right-10 top-4 flex items-center justify-center bg-[#1E3231] rounded-lg shadow-lg">
+        <lucide-icon name="BanknoteArrowUp" class="w-8 h-8 md:w-10 md:h-10" color="white"></lucide-icon>
       </div>
-      <div class="w-10 top-10 h-10 absolute right-30 flex items-center justify-center bg-[#1E3231]/30">
+      <div class="absolute w-8 h-8 md:w-10 md:h-10 right-24 md:right-32 top-8 md:top-10 flex items-center justify-center bg-[#1E3231]/30 rounded-full">
       </div>
     </div>
-    <div class="w-full h-full overflow-hidden bg-amber-300 mt-4">
-         <img src="img1homepage.jpg" class="bg-cover w-full h-full">
+
+    <!-- Image -->
+    <div class="w-full h-64 md:h-80 lg:h-96 overflow-hidden rounded-2xl shadow-2xl">
+      <img src="img1homepage.jpg" class="w-full h-full object-cover" alt="Digital banking">
     </div>
   </div>
 </section>
-<section class="w-full  h-190  overflow-hidden  flex  flex-col space-y-6">
-  <div class="w-full flex justify-between h-30 px-10 py-2">
-  <h1 class="w-60 h-full  text-2xl font-semibold">
-    Explorez nos services e-banking
-  </h1>
-    <p class="w-170 text-sm h-full">
+
+<!-- Services Section -->
+<section class="w-full min-h-screen py-12 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12">
+  <div class="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 lg:w-1/3">
+      Explorez nos services e-banking
+    </h1>
+    <p class="text-gray-600 text-sm md:text-base lg:w-2/3 lg:text-lg">
       Nous proposons un ensemble de services bancaires numériques permettant aux utilisateurs de gérer leurs finances de manière sécurisée et efficace.
-      Cette plateforme e-banking, développée dans le cadre d’un projet académique, illustre les fonctionnalités essentielles d’une banque digitale moderne, allant de la consultation des comptes à la gestion des transactions.    </p>
+      Cette plateforme e-banking, développée dans le cadre d'un projet académique, illustre les fonctionnalités essentielles d'une banque digitale moderne.
+    </p>
   </div>
-  <div class="w-full h-190 px-10 overflow-hidden ">
-     <img src="image2.jpg" class="w-full h-full bg-cover">
-  </div>
-</section>
-<section class="w-full h-auto  relative mt-10 flex flex-col items-center space-y-5 ">
-  <div class="absolute right-3 top-4 w-100 h-100 blur-sm ">
-    <img src="logo.png">
-  </div>
-  <h1 class="text-3xl w-170 text-center font-medium">Des services bancaires numériques conçus pour votre sécurité et votre confort</h1>
-   <p class="w-170 text-center text-sm">Gérez vos finances en toute simplicité grâce à une plateforme e-banking moderne et sécurisée.
-     Notre solution permet aux utilisateurs de consulter leurs comptes, effectuer des transactions et suivre leurs opérations en temps réel, tout en respectant les principes de sécurité et de fiabilité étudiés dans le cadre académique.</p>
-  <button class="px-4 text-white bg-[#1E3231] py-2">Contact Us</button>
-  <div class="w-full h-80 flex px-20 py-2 mt-2 ">
-   <div class="w-1/3  h-full flex flex-col space-y-4 items-center py-1">
-     <div class="w-20 h-20 rounded-full p-7 flex items-center bg-[#4d9683] justify-center">
-       <lucide-icon color="white" size="40" name="UserCheck"> </lucide-icon>
-     </div>     <h1 class="text-2xl font-semibold">Gestion des comptes</h1>
-     <p class="w-100 text-center">Accédez à vos comptes bancaires à tout moment, consultez vos soldes et visualisez vos informations financières de manière claire et sécurisée.</p>
-   </div>
-    <div class="w-1/3  h-full flex flex-col space-y-4 items-center py-1">
-      <div class="w-20 h-20 rounded-full p-7 flex items-center bg-[#4d9683] justify-center">
-        <lucide-icon color="white" size="40" name="Lock"> </lucide-icon>
-      </div>      <h1 class="text-2xl font-semibold">Transactions sécurisées</h1>
-      <p class="w-100 text-center">Effectuez des virements et paiements en toute confiance grâce à des mécanismes d’authentification et de sécurisation des transactions.</p>
-    </div>
-    <div class="w-1/3 z-10 h-full flex flex-col space-y-4 items-center py-1">
-     <div class="w-20 h-20 rounded-full p-7 flex items-center bg-[#4d9683] justify-center">
-       <lucide-icon color="white" size="40" name="Clock9"> </lucide-icon>
-     </div>
-      <h1 class="text-2xl font-semibold">Suivi en temps réel</h1>
-      <p class="w-100 text-center">Consultez l’historique de vos opérations et suivez vos transactions en temps réel pour une meilleure gestion financière.</p>
-    </div>
+
+  <div class="w-full h-64 md:h-80 lg:h-96 overflow-hidden rounded-3xl shadow-xl">
+    <img src="image2.jpg" class="w-full h-full object-cover" alt="Banking services">
   </div>
 </section>
-<section class="w-full h-auto flex flex-col px-20 py-2">
-    <div class="w-full h-auto flex flex-col space-y-2 ">
-      <h1 class="text-3xl font-semibold">Une expérience e-banking simple, rapide et sécurisée</h1>
-      <p class="w-180 text-sm">Accédez facilement à vos informations bancaires, consultez vos soldes, suivez vos transactions et gérez vos opérations financières en temps réel grâce à une interface intuitive et sécurisée.</p>
-    </div>
-  <div class="w-full h-full  flex justify-between">
-   <div class="w-1/2 h-full mt-5 px-1 space-y-4  flex flex-col  py-1">
-    <div class="w-140 space-y-2 hover:bg-[#1E3231]/80 hover:text-white px-3 py-2 h-auto hover:border-l-green-950/50 border-l-gray-400 border-l-4">
-        <div class="w-auto h-auto flex space-x-2">
-          <lucide-icon name="FunnelPlus"></lucide-icon>
-          <h1 class="text-lg font-semibold">Suivi des revenus et dépenses</h1>
-        </div>
-      <p>
-        Visualisez vos entrées et sorties d’argent grâce à un suivi clair de vos revenus et dépenses, afin de mieux contrôler votre budget et vos habitudes financières.
+
+<!-- Features Section -->
+<section class="w-full min-h-screen py-12 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12 bg-gray-50 relative">
+  <div class="absolute right-0 top-0 w-40 h-40 md:w-100 md:h-100 opacity-10">
+    <img src="logo.png" class="w-full h-full object-contain">
+  </div>
+
+  <div class="relative z-10 max-w-4xl mx-auto text-center space-y-6">
+    <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+      Des services bancaires numériques conçus pour votre sécurité et votre confort
+    </h1>
+    <p class="text-gray-600 text-sm md:text-base lg:text-lg">
+      Gérez vos finances en toute simplicité grâce à une plateforme e-banking moderne et sécurisée.
+      Notre solution permet aux utilisateurs de consulter leurs comptes, effectuer des transactions et suivre leurs opérations en temps réel.
+    </p>
+    <button class="px-8 py-3 bg-[#1E3231] text-white font-semibold rounded-lg hover:bg-gray-900 transition-colors">
+      Contact Us
+    </button>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 md:mt-20">
+    <!-- Feature 1 -->
+    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg text-center space-y-4 hover:shadow-xl transition-shadow">
+      <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#4d9683] flex items-center justify-center mx-auto">
+        <lucide-icon color="white" class="w-8 h-8 md:w-10 md:h-10" name="UserCheck"></lucide-icon>
+      </div>
+      <h2 class="text-xl md:text-2xl font-bold text-gray-900">Gestion des comptes</h2>
+      <p class="text-gray-600 text-sm md:text-base">
+        Accédez à vos comptes bancaires à tout moment, consultez vos soldes et visualisez vos informations financières.
       </p>
     </div>
-     <div class="w-140 space-y-2 px-3 py-2 h-auto hover:bg-[#1E3231]/80 hover:border-l-green-950/50 hover:text-white  border-l-gray-400 border-l-4">
-       <div class="w-auto h-auto flex space-x-2">
-         <lucide-icon name="Send"></lucide-icon>
-         <h1 class="text-lg font-semibold">Virements et paiements automatisés</h1>
-       </div>     <p>
-       Effectuez des virements bancaires et des paiements de manière simple et sécurisée, avec une gestion automatisée des opérations courantes.
-     </p>
-   </div>
-     <div class="w-140 space-y-2 px-3 py-2 h-auto hover:bg-[#1E3231]/80 hover:border-l-green-950/50 hover:text-white  border-l-gray-400 border-l-4">
-       <div class="w-auto h-auto flex space-x-2">
-         <lucide-icon name="Eclipse"></lucide-icon>
-         <h1 class="text-lg font-semibold">Suivi des revenus et dépenses</h1>
-       </div>       <p>
-         Consultez l’historique détaillé de vos transactions et recevez des notifications pour rester informé de toutes les activités sur votre compte.
-       </p>
-     </div>
-   </div>
-    <div class="w-1/2 h-auto px-20 py-6 flex flex-col bg-[#1E3231]/30 rounded-2xl">
-    <div class="w-full h-auto flex flex-col  px-10 py-4 rounded-2xl bg-white">
-     <div class="w-full h-auto items-center flex justify-between">
-       <div class="w-auto h-full flex space-x-1">
-        <div class="w-20 h-20 overflow-hidden rounded-full ">
-         <img src="image3.jpg">
+
+    <!-- Feature 2 -->
+    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg text-center space-y-4 hover:shadow-xl transition-shadow">
+      <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#4d9683] flex items-center justify-center mx-auto">
+        <lucide-icon color="white" class="w-8 h-8 md:w-10 md:h-10" name="Lock"></lucide-icon>
+      </div>
+      <h2 class="text-xl md:text-2xl font-bold text-gray-900">Transactions sécurisées</h2>
+      <p class="text-gray-600 text-sm md:text-base">
+        Effectuez des virements et paiements en toute confiance grâce à des mécanismes d'authentification avancés.
+      </p>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="bg-white p-6 md:p-8 rounded-2xl shadow-lg text-center space-y-4 hover:shadow-xl transition-shadow">
+      <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-[#4d9683] flex items-center justify-center mx-auto">
+        <lucide-icon color="white" class="w-8 h-8 md:w-10 md:h-10" name="Clock9"></lucide-icon>
+      </div>
+      <h2 class="text-xl md:text-2xl font-bold text-gray-900">Suivi en temps réel</h2>
+      <p class="text-gray-600 text-sm md:text-base">
+        Consultez l'historique de vos opérations et suivez vos transactions en temps réel.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section class="w-full min-h-screen py-12 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12">
+  <div class="max-w-6xl mx-auto">
+    <div class="space-y-4 mb-12">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+        Une expérience e-banking simple, rapide et sécurisée
+      </h1>
+      <p class="text-gray-600 text-sm md:text-base lg:text-lg max-w-3xl">
+        Accédez facilement à vos informations bancaires, consultez vos soldes, suivez vos transactions et gérez vos opérations financières en temps réel.
+      </p>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+      <!-- Left Features -->
+      <div class="lg:w-1/2 space-y-6">
+        <div class="p-6 border-l-4 border-emerald-500 hover:bg-gray-50 rounded-r-lg transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <lucide-icon name="FunnelPlus" class="w-6 h-6 text-emerald-600"></lucide-icon>
+            <h2 class="text-lg md:text-xl font-semibold">Suivi des revenus et dépenses</h2>
+          </div>
+          <p class="text-gray-600 text-sm md:text-base">
+            Visualisez vos entrées et sorties d'argent grâce à un suivi clair de vos revenus et dépenses.
+          </p>
         </div>
-         <div class="w-auto justify-center space-y-1 h-full flex flex-col">
-            <h1 class="font-semibold">Oussam Hamdane</h1>
-            <p>Transfer</p>
-         </div>
-       </div>
-       <div class="px-3 py-1 h-10 flex items-center justify-center bg-emerald-600 text-white rounded-2xl"><h1 class="">Completed</h1></div>
-     </div>
-      <div class="w-full h-[0.7px] mt-4 mb-2 bg-gray-950/50"></div>
-      <div class="w-full h-full  flex space-x-2">
-         <div class="w-1/3 h-full  space-y-2 flex flex-col">
-         <h1 class="font-semibold">N Transaction</h1>
-           <p>h-2435hd2</p>
-         </div>
-        <div class="w-1/3 h-full  space-y-2 flex flex-col">
-          <h1 class="font-semibold">Date Transaction</h1>
-          <p>23 Decembre 2025</p>
+
+        <div class="p-6 border-l-4 border-emerald-500 hover:bg-gray-50 rounded-r-lg transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <lucide-icon name="Send" class="w-6 h-6 text-emerald-600"></lucide-icon>
+            <h2 class="text-lg md:text-xl font-semibold">Virements et paiements automatisés</h2>
+          </div>
+          <p class="text-gray-600 text-sm md:text-base">
+            Effectuez des virements bancaires et des paiements de manière simple et sécurisée.
+          </p>
         </div>
-        <div class="w-1/3 h-full  space-y-2 flex flex-col">
-          <h1 class="font-semibold">Amount</h1>
-          <p>5,000 DH</p>
+
+        <div class="p-6 border-l-4 border-emerald-500 hover:bg-gray-50 rounded-r-lg transition-colors">
+          <div class="flex items-center gap-3 mb-3">
+            <lucide-icon name="Eclipse" class="w-6 h-6 text-emerald-600"></lucide-icon>
+            <h2 class="text-lg md:text-xl font-semibold">Historique des transactions</h2>
+          </div>
+          <p class="text-gray-600 text-sm md:text-base">
+            Consultez l'historique détaillé de vos transactions et recevez des notifications.
+          </p>
         </div>
       </div>
-    </div>
-      <div class="w-full h-40 bg-linear-to-b mt-3 space-y-2 rounded-2xl from-[#1E3231] flex flex-col justify-center items-center to-[#1E3231]/40">
-        <h1 class="text-white font-semibold">You Recived</h1>
-        <div class="w-auto h-10 bg-white flex justify-center items-center px-6 py-2 rounded-2xl">
-          <h1 class="font-semibold text-lg">5,000 DH</h1>
+
+      <!-- Right Card -->
+      <div class="lg:w-1/2">
+        <div class="bg-gray-50 p-6 md:p-8 rounded-3xl space-y-6">
+          <!-- Transaction Card -->
+          <div class="bg-white p-6 rounded-2xl shadow-lg">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 md:w-20 md:h-20 overflow-hidden rounded-full">
+                  <img src="image3.jpg" class="w-full h-full object-cover" alt="Profile">
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg">Oussam Hamdane</h3>
+                  <p class="text-gray-500 text-sm">Transfer</p>
+                </div>
+              </div>
+              <span class="px-4 py-2 bg-emerald-100 text-emerald-700 font-semibold rounded-full text-sm">
+                Completed
+              </span>
+            </div>
+
+            <div class="border-t my-4 pt-4">
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                  <p class="text-gray-500 text-sm">N Transaction</p>
+                  <p class="font-semibold">h-2435hd2</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-sm">Date Transaction</p>
+                  <p class="font-semibold">23 Decembre 2025</p>
+                </div>
+                <div>
+                  <p class="text-gray-500 text-sm">Amount</p>
+                  <p class="font-semibold">5,000 DH</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Amount Received -->
+          <div class="bg-gradient-to-r from-[#1E3231] to-[#2c5254] p-6 rounded-2xl text-center space-y-4">
+            <h3 class="text-white text-lg md:text-xl font-semibold">You Received</h3>
+            <div class="bg-white inline-flex px-8 py-3 rounded-full">
+              <span class="text-2xl md:text-3xl font-bold">5,000 DH</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<div class="w-full mt-4 mt-4 h-150">
- <app-why-chosse></app-why-chosse>
-</div>
-<div class="w-full  mt-4 h-auto">
-  <app-avis-client></app-avis-client>
+
+<!-- Components -->
+<div class="w-full py-8 md:py-12 px-4 sm:px-6 md:px-8 lg:px-12">
+  <app-why-chosse></app-why-chosse>
 </div>
 
+<div class="w-full py-8 md:py-12 px-4 sm:px-6 md:px-8 lg:px-12">
+  <app-avis-client></app-avis-client>
+</div>
