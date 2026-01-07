@@ -8,6 +8,10 @@ import {Login} from './ui/login/login';
 import {AuthDashbord} from './layouts/auth-dashbord/auth-dashbord';
 import {Index} from './dashbord/ui/index';
 import {authenticationGuard} from './guards/authentication-guard';
+import {About} from './ui/about/about';
+import {Account} from './ui/account/account';
+import {Customers} from './dashbord/ui/customers/customers';
+import {Savingaccount} from './dashbord/ui/savingaccount/savingaccount';
 
 const routes: Routes = [
   {
@@ -33,6 +37,9 @@ const routes: Routes = [
     canActivate : [authenticationGuard],
     children:[
       {path: '',component: Index },
+      {path: 'customers',component: Customers },
+      {path: 'savingaccount',component: Savingaccount },
+
     ]
   }
 ];

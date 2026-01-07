@@ -15,10 +15,11 @@ Chart.register(...registerables);
 })
 export class Index implements AfterViewInit,OnInit{
   chart!: Chart;
+  Customerslist! :Observable<Array<Customer>>;
   countCustomer! : Observable<number>;
   countbankaccount! : Observable<number>;
   amount! : Observable<number>;
-
+  operation! :Observable<number>
   errorMessage!:string
   errorMessageCount!:string
 
@@ -31,6 +32,13 @@ export class Index implements AfterViewInit,OnInit{
         return throwError(err);
       })
     );
+    this.Customerslist=this.customerservices.getCustomer().pipe(
+      catchError(err => {
+        this.errorMessage=err.message;
+        return throwError(err);
+      })
+    );
+    console.log(this.Customerslist)
     this.countbankaccount=this.accountbankservice.getCountAccount().pipe(
       catchError(err => {
         this.errorMessageCount=err.message;
@@ -38,6 +46,12 @@ export class Index implements AfterViewInit,OnInit{
       })
     )
      this.amount=this.accountbankservice.getAmount().pipe(
+       catchError(err => {
+         this.errorMessageCount=err.message;
+         return throwError(err);
+       })
+     )
+     this.operation=this.accountbankservice.getOperation().pipe(
        catchError(err => {
          this.errorMessageCount=err.message;
          return throwError(err);

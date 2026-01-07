@@ -58,6 +58,8 @@ import { AuthDashbord } from './layouts/auth-dashbord/auth-dashbord';
 import {NgClass} from '@angular/common';
 import {HTTP_INTERCEPTORS, provideHttpClient, withInterceptors, withInterceptorsFromDi} from '@angular/common/http';
 import {appAuthinterceptorInterceptor} from './interceptors/app-authinterceptor-interceptor';
+import {About} from './ui/about/about';
+import { Savingaccount } from './dashbord/ui/savingaccount/savingaccount';
 
 @NgModule({
   declarations: [
@@ -76,8 +78,9 @@ import {appAuthinterceptorInterceptor} from './interceptors/app-authinterceptor-
     Navbardashbord,
     Index,
     AuthDashbord,
-    About
-  ],  // ✅ THIS COMMA WAS MISSING
+    About,
+    Savingaccount
+  ],
 
   imports: [
     BrowserModule,

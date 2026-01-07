@@ -8,7 +8,7 @@
       <p class="text-sm text-white font-normal">Main Menu</p>
       <div class="w-full flex items-center   mt-2 space-x-4 h-10 py-1 px-6">
         <lucide-icon color="gray" size="20px" name="House"></lucide-icon>
-        <h1 class="text-sm  font-normal text-white">Dashboard</h1>
+        <a routerLink="/dashbord" class="text-sm  font-normal text-white">Dashboard</a>
       </div>
       <div class="w-full flex items-center  flex-col  mt-2  h-auto py-1 px-5">
         <div  (click)="changeEtatdropedwon()"  class="{{dropdown_departement ? '' : ''}} px-1 py-1 rounded-lg w-full justify-between flex  h-auto">
@@ -22,7 +22,7 @@
           <div   class="w-full mt-5 ml-6 justify-between flex  h-auto">
             <div class="w-auto h-full flex space-x-4">
               <lucide-icon color="gray" size="20px" name="HandCoins"></lucide-icon>
-              <button class="text-sm  font-normal text-white">Saving Account</button>
+              <button routerLink="savingaccount" class="text-sm  font-normal text-white">Saving Account</button>
             </div>
           </div>
           <div   class="w-full mt-5 ml-6 justify-between flex  h-auto">
@@ -35,7 +35,7 @@
       </div>
       <div class="w-full flex items-center  mt-3 space-x-4 h-auto py-1 px-6">
         <lucide-icon color="gray" size="20px" name="User"></lucide-icon>
-        <h1 class="text-sm  font-normal text-gray-500">Cutomers</h1>
+        <a routerLink="customers" class="text-sm  font-normal text-gray-500">Cutomers</a>
       </div>
       <div class="w-full flex items-center  mt-3 space-x-4 h-auto py-1 px-6">
         <lucide-icon color="gray" size="20px" name="Phone"></lucide-icon>
