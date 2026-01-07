@@ -58,9 +58,11 @@ import { AuthDashbord } from './layouts/auth-dashbord/auth-dashbord';
 import { About } from './ui/about/about';
 import { Transactions } from './dashbord/ui/transactions/transactions';
 import { Operations } from './dashbord/ui/operations/operations';
-import {provideHttpClient, withInterceptors} from '@angular/common/http';
 import {appAuthinterceptorInterceptor} from './interceptors/app-authinterceptor-interceptor';
-
+import {NgClass} from '@angular/common';
+import { Savingaccount } from './dashbord/ui/savingaccount/savingaccount';
+import {Customers} from './dashbord/ui/customers/customers';
+import {HTTP_INTERCEPTORS, provideHttpClient, withInterceptors, withInterceptorsFromDi} from '@angular/common/http';
 @NgModule({
   declarations: [
     App,
@@ -79,6 +81,7 @@ import {appAuthinterceptorInterceptor} from './interceptors/app-authinterceptor-
     Index,
     AuthDashbord,
     About,
+    Savingaccount
   ],
 
   imports: [

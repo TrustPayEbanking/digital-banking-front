@@ -1,5 +1,10 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import { Chart, registerables } from 'chart.js';
+import {Auth} from '../../../services/auth';
+import {catchError, Observable, throwError} from 'rxjs';
+import {CustomerService} from '../../../services/customer';
+import {Customer} from '../../../model/Customer.model';
+import {Bankaccount} from '../../../services/bankaccount';
 Chart.register(...registerables);
 
 @Component({
@@ -8,12 +13,54 @@ Chart.register(...registerables);
   templateUrl: './index.html',
   styleUrl: './index.css',
 })
-export class Index implements AfterViewInit{
+export class Index implements AfterViewInit,OnInit{
   chart!: Chart;
+  Customerslist! :Observable<Array<Customer>>;
+  countCustomer! : Observable<number>;
+  countbankaccount! : Observable<number>;
+  amount! : Observable<number>;
+  operation! :Observable<number>
+  errorMessage!:string
+  errorMessageCount!:string
+
+  constructor(public services :Auth,private customerservices:CustomerService,private accountbankservice:Bankaccount) {
+   }
+   ngOnInit() {
+    this.countCustomer=this.customerservices.getCountCoutomer().pipe(
+      catchError(err => {
+        this.errorMessage=err.message;
+        return throwError(err);
+      })
+    );
+    this.Customerslist=this.customerservices.getCustomer().pipe(
+      catchError(err => {
+        this.errorMessage=err.message;
+        return throwError(err);
+      })
+    );
+    console.log(this.Customerslist)
+    this.countbankaccount=this.accountbankservice.getCountAccount().pipe(
+      catchError(err => {
+        this.errorMessageCount=err.message;
+        return throwError(err);
+      })
+    )
+     this.amount=this.accountbankservice.getAmount().pipe(
+       catchError(err => {
+         this.errorMessageCount=err.message;
+         return throwError(err);
+       })
+     )
+     this.operation=this.accountbankservice.getOperation().pipe(
+       catchError(err => {
+         this.errorMessageCount=err.message;
+         return throwError(err);
+       })
+     )
+   }
 
   ngAfterViewInit(): void {
     const canvas = document.getElementById('chart') as HTMLCanvasElement;
-
     this.chart = new Chart(canvas, {
       type: 'line',
       data: {

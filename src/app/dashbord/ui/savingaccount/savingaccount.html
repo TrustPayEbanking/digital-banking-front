@@ -1,0 +1,136 @@
+<div class="w-full mt-3 rounded-2xl  p-6">
+
+  <!-- ===== HEADER ===== -->
+  <div class="w-full flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+
+    <!-- Left -->
+    <div class="flex items-center gap-3">
+      <button
+        class="px-4 py-2 rounded-full bg-white/90 hover:bg-white text-[#1E3231] font-semibold shadow-sm flex items-center gap-2">
+        <span>Add New Account</span>
+        <span class="text-xl leading-none">+</span>
+      </button>
+
+      <h1 class="text-white font-semibold text-lg">Saving Accounts</h1>
+    </div>
+
+    <!-- Right -->
+    <div class="flex items-center gap-3">
+      <div class="relative">
+        <span class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">⌕</span>
+        <input
+          type="text"
+          placeholder="Search..."
+          class="bg-white text-sm rounded-xl pl-9 pr-4 w-64 h-10 outline-none shadow-sm" />
+      </div>
+
+      <button class="h-10 px-4 rounded-xl bg-white text-sm shadow-sm flex items-center gap-2">
+        <span>Status</span>
+        <span class="text-gray-500">▾</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== STATS ===== -->
+  <div class="mt-5 flex flex-wrap gap-4">
+    <div class="bg-white/90 rounded-2xl px-5 py-4 shadow-sm min-w-[220px]">
+      <p class="text-xs text-gray-500">Total Saving Accounts</p>
+      <p class="text-2xl font-semibold text-[#1E3231]">
+        {{totalCount}}
+      </p>
+    </div>
+
+    <div class="bg-white/90 rounded-2xl px-5 py-4 shadow-sm min-w-[220px]">
+      <p class="text-xs text-gray-500">Total Balance</p>
+      <p class="text-2xl font-semibold text-[#1E3231]">
+     {{totalBalance}}
+      </p>
+    </div>
+
+    <div
+      *ngIf="errorMessage"
+      class="bg-red-50 border border-red-200 text-red-700 rounded-2xl px-5 py-4">
+      {{ errorMessage }}
+    </div>
+  </div>
+
+  <!-- ===== TABLE ===== -->
+  <div class="mt-6 overflow-hidden rounded-2xl shadow-sm bg-white/80">
+
+    <table class="w-full text-left">
+      <thead class="bg-gray-50 text-gray-500 text-xs">
+      <tr>
+        <th class="px-6 py-4 font-semibold">Account ID</th>
+        <th class="px-6 py-4 font-semibold">Balance</th>
+        <th class="px-6 py-4 font-semibold">Interest</th>
+        <th class="px-6 py-4 font-semibold">Customer</th>
+        <th class="px-6 py-4 font-semibold">Email</th>
+        <th class="px-6 py-4 font-semibold">Created At</th>
+        <th class="px-6 py-4 font-semibold text-right">...</th>
+      </tr>
+      </thead>
+
+      <tbody class="text-sm text-gray-700">
+
+      <!-- DATA -->
+      <ng-container *ngIf="account | async as accounts; else loading">
+
+        <tr
+          *ngFor="let a of accounts"
+          class="border-t border-gray-100 hover:bg-white transition">
+
+          <td class="px-6 py-4 font-medium text-gray-800">
+            {{ a.id }}
+          </td>
+
+          <td class="px-6 py-4">
+            {{ a.balance | number:'1.0-2' }}
+          </td>
+
+          <td class="px-6 py-4">
+            {{ a.interestRate }} %
+          </td>
+
+          <td class="px-6 py-4">
+            {{ a.customer?.name }}
+          </td>
+
+          <td class="px-6 py-4">
+            {{ a.customer?.Email }}
+          </td>
+
+          <td class="px-6 py-4">
+            {{ a.createdAt || '-' }}
+          </td>
+
+
+
+          <td class="px-6 py-4 text-right text-gray-500">
+            ⋯
+          </td>
+        </tr>
+
+        <tr *ngIf="accounts.length === 0">
+          <td colspan="8" class="px-6 py-8 text-center text-gray-500">
+            No saving accounts found
+          </td>
+        </tr>
+
+      </ng-container>
+
+      <!-- LOADING -->
+      <ng-template #loading>
+        <tr>
+          <td colspan="8" class="px-6 py-8 text-gray-500">
+            Loading...
+          </td>
+        </tr>
+      </ng-template>
+
+      </tbody>
+    </table>
+  </div>
+
+
+
+</div>
